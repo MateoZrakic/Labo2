@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage"
+             BackgroundColor="#F3F3F3"
+             Title="Home">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <!-- Titolo principale -->
+            <Label Text="Risolutore Equazioni"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#5E35B1"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Data l'equazione: ax² + bx + c = 0"
+                   FontSize="14"
+                   TextColor="Gray"
+                   HorizontalTextAlignment="Center"/>
+
+            <!-- Card contenitore -->
+            <Frame CornerRadius="20"
+                   Padding="20"
+                   BackgroundColor="White"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Coefficiente A -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Coefficiente A:"
+                               FontAttributes="Bold"/>
+                        <Entry x:Name="EntA"
+                               Placeholder="Inserisci a"
+                               Keyboard="Numeric"/>
+                    </VerticalStackLayout>
+
+                    <!-- Coefficiente B -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Coefficiente B:"
+                               FontAttributes="Bold"/>
+                        <Entry x:Name="EntB"
+                               Placeholder="Inserisci b"
+                               Keyboard="Numeric"/>
+                    </VerticalStackLayout>
+
+                    <!-- Coefficiente C -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Coefficiente C:"
+                               FontAttributes="Bold"/>
+                        <Entry x:Name="EntC"
+                               Placeholder="Inserisci c"
+                               Keyboard="Numeric"/>
+                    </VerticalStackLayout>
+
+                    <!-- Bottone -->
+                    <Button Text="CALCOLA RADICI"
+                            Clicked="OnCalcolaClicked"
+                            BackgroundColor="#5E35B1"
+                            TextColor="White"
+                            CornerRadius="12"
+                            HeightRequest="50"
+                            FontAttributes="Bold"/>
+
+                    <!-- Risultato -->
+                    <Label x:Name="LblRisultato"
+                           Text="Inserisci i valori per iniziare"
+                           HorizontalTextAlignment="Center"
+                           BackgroundColor="#EEEEEE"
+                           Padding="15"
+                           FontSize="16"
+                           TextColor="Black"
+                           />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
